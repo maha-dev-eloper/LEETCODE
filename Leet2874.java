@@ -1,22 +1,16 @@
+//maximum-triplet-value--leetcode-2874
 class Solution {
-    public static void main(String[] args) {
-        int[] nums = {12, 6, 1, 2, 7};
-         int result = maximumTripletValue(nums);
+  public long maximumTripletValue(int[] nums) {
+    long ans = 0;
+    int maxDiff = 0; // max(nums[i] - nums[j])
+    int maxNum = 0;  // max(nums[i])
 
-         System.out.println(result);
+    for (final int num : nums) {
+      ans = Math.max(ans, (long) maxDiff * num); // num := nums[k]
+      maxDiff = Math.max(maxDiff, maxNum - num); // num := nums[j]
+      maxNum = Math.max(maxNum, num);            // num := nums[i]
     }
-    public static int maximumTripletValue(int[] nums) {
-        int n = nums.length;
-        int maxValue = Integer.MIN_VALUE; 
 
-        for (int i = 0; i < n - 2; i++) {
-            for (int j = i + 1; j < n - 1; j++) {
-                for (int k = j + 1; k < n; k++) {                
-                    int value = (nums[i] - nums[j]) * nums[k];
-                    maxValue = Math.max(maxValue, value);
-                }
-            }
-        }
-        return maxValue < 0 ? 0 : maxValue;
-    }
+    return ans;
+  }
 }
