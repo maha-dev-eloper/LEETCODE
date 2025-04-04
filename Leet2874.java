@@ -7,7 +7,7 @@ class Solution {
 
     for (final int num : nums) {
       ans = Math.max(ans, (long) maxDiff * num); // num := nums[k]
-      maxDiff = Math.max(maxDiff, maxNum - num); // num := nums[j]
+      maxDiff = Math.max(maxDiff, maxNum - num); // adnum := nums[j]
       maxNum = Math.max(maxNum, num);            // num := nums[i]
     }
 
