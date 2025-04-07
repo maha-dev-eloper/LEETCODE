@@ -1,13 +1,15 @@
 //leetcode 368. Largest Divisible Subset
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class Leet368{
   public List<Integer> largestDivisibleSubset(int[] nums) {
     final int n = nums.length;
     List<Integer> ans = new ArrayList<>();
     // sizeEndsAt[i] := the maximum size ends in nums[i]
     int[] sizeEndsAt = new int[n];
-    // prevIndex[i] := the best index s.t.
-    // 1. nums[i] % nums[prevIndex[i]] == 0 and
-    // 2. can increase the size of the subset
     int[] prevIndex = new int[n];
     int maxSize = 0; // Max size of the subset
     int index = -1;  // Track the best ending index
