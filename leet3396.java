@@ -1,5 +1,9 @@
 //leetcode--3396
-class Solution {
+
+import java.util.HashSet;
+import java.util.Set;
+
+class leet3396 {
     public int minimumOperations(int[] nums) {
       Set<Integer> seen = new HashSet<>();
       for (int i = nums.length - 1; i >= 0; --i)
