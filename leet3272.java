@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 class leet3272 {
   public long countGoodIntegers(int n, int k) {
     final int halfLength = (n + 1) / 2;
