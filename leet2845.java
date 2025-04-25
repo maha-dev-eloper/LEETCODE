@@ -1,3 +1,7 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 class leet2845 {
   public long countInterestingSubarrays(List<Integer> nums, int modulo, int k) {
     long ans = 0;
