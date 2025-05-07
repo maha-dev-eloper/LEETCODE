@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.TreeMap;
+
 class leet2071 {
   public int maxTaskAssign(int[] tasks, int[] workers, int pills, int strength) {
     int ans = 0;
