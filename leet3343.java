@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class leet3343 {
   public int countBalancedPermutations(String num) {
     int[] nums = getNums(num);
