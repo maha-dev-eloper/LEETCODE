@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class leet3335 {
   public int lengthAfterTransformations(String s, int t) {
     final int MOD = 1_000_000_007;
