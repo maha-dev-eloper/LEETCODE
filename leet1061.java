@@ -1,5 +1,5 @@
 class leet1061 {
-  public UnionFind(int n) {
+  public leet1061(int n) {
     id = new int[n];
     for (int i = 0; i < n; ++i)
       id[i] = i;
@@ -24,7 +24,7 @@ class leet1061 {
 class Solution {
   public String smallestEquivalentString(String s1, String s2, String baseStr) {
     StringBuilder sb = new StringBuilder();
-    UnionFind uf = new UnionFind(26);
+    leet1061 uf = new leet1061(26);
 
     for (int i = 0; i < s1.length(); ++i)
       uf.union(s1.charAt(i) - 'a', s2.charAt(i) - 'a');
