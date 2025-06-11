@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class leet3445 {
   public int maxDifference(String s, int k) {
     int ans = Integer.MIN_VALUE;
